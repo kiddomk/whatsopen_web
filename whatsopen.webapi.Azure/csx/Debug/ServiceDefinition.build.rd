@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="whatsopen.webapi.Azure" generation="1" functional="0" release="0" Id="76e7eb30-a8c9-4a1a-b0fe-90e0152a1db6" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="whatsopen.webapi.Azure" generation="1" functional="0" release="0" Id="d0531361-194c-463e-bbec-8ee81968db67" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="whatsopen.webapi.AzureGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -42,7 +42,7 @@
       </maps>
       <components>
         <groupHascomponents>
-          <role name="whatsopen.webapi" generation="1" functional="0" release="0" software="C:\Users\Jun Seki\Dropbox\whatsopen\whatsopen.webapi.Azure\csx\Debug\roles\whatsopen.webapi" entryPoint="base\x64\WaHostBootstrapper.exe" parameters="base\x64\WaIISHost.exe " memIndex="1792" hostingEnvironment="frontendadmin" hostingEnvironmentVersion="2">
+          <role name="whatsopen.webapi" generation="1" functional="0" release="0" software="C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi.Azure\csx\Debug\roles\whatsopen.webapi" entryPoint="base\x64\WaHostBootstrapper.exe" parameters="base\x64\WaIISHost.exe " memIndex="1792" hostingEnvironment="frontendadmin" hostingEnvironmentVersion="2">
             <componentports>
               <inPort name="Endpoint1" protocol="http" portRanges="80" />
             </componentports>
@@ -68,9 +68,9 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="d5c48494-d064-487c-8148-27cdd5ca2de5" ref="Microsoft.RedDog.Contract\ServiceContract\whatsopen.webapi.AzureContract@ServiceDefinition.build">
+    <implementation Id="a1a20687-43f7-40d6-afa7-e1d36b1f0c17" ref="Microsoft.RedDog.Contract\ServiceContract\whatsopen.webapi.AzureContract@ServiceDefinition.build">
       <interfacereferences>
-        <interfaceReference Id="33a2a364-f408-423f-9b4a-2b4cff10f7e3" ref="Microsoft.RedDog.Contract\Interface\whatsopen.webapi:Endpoint1@ServiceDefinition.build">
+        <interfaceReference Id="37b9c84d-4c34-4f5f-8049-f1868149960c" ref="Microsoft.RedDog.Contract\Interface\whatsopen.webapi:Endpoint1@ServiceDefinition.build">
           <inPort>
             <inPortMoniker name="/whatsopen.webapi.Azure/whatsopen.webapi.AzureGroup/whatsopen.webapi:Endpoint1" />
           </inPort>

@@ -110,3 +110,5 @@ C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi.Azure\obj\Debug\wh
 C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi.Azure\obj\Debug\whatsopen.webapi\Views\Web.config
 C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi.Azure\obj\Debug\whatsopen.webapi\Views\_ViewStart.cshtml
 C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi.Azure\obj\Debug\whatsopen.webapi\Web.config
+C:\Users\Oyvind\Documents\GitHub\whatsopen_web\whatsopen.webapi.Azure\bin\Debug\ServiceConfiguration.cscfg
+C:\Users\Oyvind\Documents\GitHub\whatsopen_web\whatsopen.webapi.Azure\bin\Debug\ServiceDefinition.csdef

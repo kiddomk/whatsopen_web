@@ -35,7 +35,10 @@ namespace whatsopen.webapi.Models
         {
             if (store.Id == default(int)) {
                 // New entity
-                context.Stores.Add(store);
+                if (context.Stores.FirstOrDefault(n => n.VenueUrl == store.VenueUrl) == null)
+                {
+                    context.Stores.Add(store);
+                }
             } else {
                 // Existing entity
                 context.Entry(store).State = EntityState.Modified;

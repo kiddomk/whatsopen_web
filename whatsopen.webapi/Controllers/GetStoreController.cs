@@ -25,7 +25,7 @@ namespace whatsopen.webapi.Controllers
         // GET api/values
         public List<Store> Get()
         {
-            return storeRepository.All.ToList();
+            return storeRepository.All.Take(10).ToList();
         }
 
         // GET api/values/5

@@ -15,8 +15,8 @@ namespace whatsopen.webapi.Models
         public string Country { get; set; }
         public string Phone { get; set; }
         public string PostCode { get; set; }
-        public string Latitude { get; set; }
-        public string Longitude { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
         public DateTime MondayOpenTime { get; set; }
         public DateTime MondayCloseTime { get; set; }
         public DateTime TuesdayOpenTime { get; set; }
@@ -33,6 +33,15 @@ namespace whatsopen.webapi.Models
         public DateTime SundayCloseTime { get; set; }
         public string Notes { get; set; }
         public decimal? Distance { get; set; }
-    
+
+        public string VenueType { get; set; }
+        public string PictureUrl { get; set; }
+        public double Rating { get; set; }
+        public string VenueUrl { get; set; }
+        public string Neighborhoods { get; set; }
+
+        public int ImportStatus { get; set; }
+        
+
     }
 }

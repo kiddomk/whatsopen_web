@@ -8,7 +8,7 @@
 
   **********************************************************************************************
 -->
-<ServiceConfiguration serviceName="whatsopen.webapi.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="1" osVersion="*" schemaVersion="2012-05.1.7">
+<ServiceConfiguration serviceName="whatsopen.webapi.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="1" osVersion="*" schemaVersion="2012-10.1.8">
   <Role name="whatsopen.webapi">
     <Instances count="1" />
     <ConfigurationSettings>

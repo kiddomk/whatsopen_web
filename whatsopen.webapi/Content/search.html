@@ -1,0 +1,193 @@
+
+<!--
+This example is a proof of concept, for how to use the Yelp v2 API with javascript.
+You wouldn't actually want to expose your access token secret like this in a real application.
+-->
+
+<html> 
+<head> 
+<title>Yelp OAuth Example</title> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script> 
+<script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
+<script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
+<script type="text/javascript" src="https://raw.github.com/padolsey/prettyPrint.js/master/prettyprint.js"></script>
+<script type="text/javascript">
+var auth = { 
+  //
+  // Update with your auth tokens.
+  //
+    consumerKey: "pfFghon8lmdAQ0rrIy-hhg",
+    consumerSecret: "CPZY5RpssIxzPhauuXZuTU4Bps4",
+    accessToken: "AVSptLQwd_mR0NyIeoOcsmgeGJJUnvJ_",
+  // This example is a proof of concept, for how to use the Yelp v2 API with javascript.
+  // You wouldn't actually want to expose your access token secret like this in a real application.
+    accessTokenSecret: "KDKA5kuBdb1xHcacx7RnEp8yBgQ",
+  serviceProvider: { 
+    signatureMethod: "HMAC-SHA1"
+  }
+};
+var results;
+
+
+
+function getResults() {
+
+    var terms = 'nightlife';
+    var near = 'Angel,London';
+
+    var accessor = {
+        consumerSecret: auth.consumerSecret,
+        tokenSecret: auth.accessTokenSecret
+    };
+
+    parameters = [];
+    parameters.push(['term', terms]);
+    parameters.push(['limit', 20]);
+    parameters.push(['offset', $("#offset").val()]);
+    parameters.push(['location', near]);
+    parameters.push(['callback', 'cb']);
+    parameters.push(['oauth_consumer_key', auth.consumerKey]);
+    parameters.push(['oauth_consumer_secret', auth.consumerSecret]);
+    parameters.push(['oauth_token', auth.accessToken]);
+    parameters.push(['oauth_signature_method', 'HMAC-SHA1']);
+
+    var message = {
+        'action': 'http://api.yelp.com/v2/search',
+        'method': 'GET',
+        'parameters': parameters
+    };
+
+    OAuth.setTimestampAndNonce(message);
+    OAuth.SignatureMethod.sign(message, accessor);
+
+    var parameterMap = OAuth.getParameterMap(message.parameters);
+    parameterMap.oauth_signature = OAuth.percentEncode(parameterMap.oauth_signature)
+    console.log(parameterMap);
+
+    $.ajax({
+        'url': message.action,
+        'data': parameterMap,
+        'cache': true,
+        'dataType': 'jsonp',
+        'jsonpCallback': 'cb',
+        'success': function(data, textStats, XMLHttpRequest) {
+            console.log(data);
+            results = data;
+            console.log("results:", results);
+            //var output = prettyPrint(data);
+            //$("body").append(output);
+            var alloutput = "";
+            var output = "";
+            for (i = 0; i < results.businesses.length; i++) {
+                var bus = results.businesses[i];
+                var address = "";
+                var address2 = "";
+                var neighborhoods = "";
+                var categories = "";
+                var city = "";
+                var postal_code = "";
+                var latitude = 0;
+                var longitude = 0;
+                if (bus.location) {
+                    if (bus.location.address) {
+                        if (bus.location.address.length > 0) {
+                            address = bus.location.address[0];
+                        } else {
+                            address = bus.location.city
+                        }
+                        if (bus.location.address.length > 1) {
+                            address2 = bus.location.address[1];
+                        }
+                    }
+                    if (bus.location.neighborhoods) {
+                        if (bus.location.neighborhoods.length > 0) {
+                            neighborhoods = bus.location.neighborhoods[0];
+                        }
+                        if (bus.location.neighborhoods.length > 1) {
+                            neighborhoods = bus.location.neighborhoods[1] + ", " + bus.location.neighborhoods[0];
+                        }
+                    }
+                    if (bus.location.coordinate) {
+                        latitude = bus.location.coordinate.latitude;
+                        longitude = bus.location.coordinate.longitude;
+                    }
+                    if (bus.location.city) {
+                        city = bus.location.city;
+               
+                    }
+                    if (bus.location.postal_code) {
+                        postal_code = bus.location.postal_code;
+
+                    }
+                }
+                if (bus.categories) {
+                    if (bus.categories.length > 0) {
+                        categories = bus.categories[0][0];
+                    }
+                }
+                var image_url = "";
+                if (bus.image_url) {
+                    image_url = bus.image_url.replace("ms.jpg", "l.jpg")
+                }
+        
+                var snippet_text = "";
+                if (bus.snippet_text) {
+                    snippet_text = bus.snippet_text.replace("\r\n", " ")
+                    snippet_text = snippet_text.replace("\n", " ")
+                    snippet_text = snippet_text.replace("\n", " ")
+                    snippet_text = snippet_text.replace("\n", " ")
+                    snippet_text = snippet_text.replace("\n", " ")
+                }
+                var snippet = snippet_text.replace("\"", " ")
+                snippet = snippet.replace("\"", " ")
+                snippet = snippet.replace("\"", " ")
+                snippet = snippet.replace("\"", " ")
+
+                output = "store = new Store(){";
+                output += "Name=\"" + bus.name + "\",";
+                output += "Address=\"" + address + "\",";
+                output += "PictureUrl=\"" + image_url + "\",";
+                output += "Phone=\"" +  bus.phone + "\",";
+                output += "Rating=" + bus.rating + ",";
+                output += "Notes=\"" + snippet.replace("\n", " ") + "\",";
+                output += "Neighborhoods=\"" + neighborhoods + "\",";
+                output += "Address2=\"" + address2 + "\",";
+                output += "PostCode=\"" + postal_code + "\",";
+                output += "City=\"" + city + "\",";
+                output += "VenueUrl=\"" + bus.url + "\",";
+                output += "VenueType=\"" + categories + "\",";
+                output += "Latitude=" + latitude + ",";
+                output += "Longitude=" + longitude + "";
+                output += "};\n";
+                output += "if (store.VenueType.EndsWith(\"s\")) {store.VenueType = store.VenueType.Substring(0,store.VenueType.Length-1);}\n";
+                output += "storeRepository.InsertOrUpdate(store);\n";
+
+                console.log("business:", output);
+                alloutput += output
+            }
+            $("#output").val(alloutput);
+
+            var offset = parseInt($("#offset").attr("value"));
+            offset += 20;
+            //alert(offset);
+            $("#offset").attr("value", "");
+            $("#offset").attr("value", parseInt(offset));
+        }
+        
+
+    });
+}
+$("#getResults").live("click",getResults);
+
+
+</script>
+</head> 
+<body>
+
+    <input type="text" id="offset" value="20" /> <button id="getResults" title="Fetch!">Fetch!</button>
+    <textarea id="output" style="width:100%;height:400px;"></textarea>
+</body>
+</html>
+
+
+

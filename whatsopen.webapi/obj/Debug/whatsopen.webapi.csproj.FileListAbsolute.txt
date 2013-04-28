@@ -129,3 +129,41 @@ C:\Users\Oyvind\Documents\GitHub\whatsopen_web\whatsopen.webapi\bin\Mono.Math.xm
 C:\Users\Oyvind\Documents\GitHub\whatsopen_web\whatsopen.webapi\bin\RestSharp.dll
 C:\Users\Oyvind\Documents\GitHub\whatsopen_web\whatsopen.webapi\bin\YelpSharp.dll
 C:\Users\Oyvind\Documents\GitHub\whatsopen_web\whatsopen.webapi\bin\RestSharp.xml
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\obj\Debug\whatsopen.webapi.csprojResolveAssemblyReference.cache
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\obj\Debug\whatsopen.webapi.dll
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\obj\Debug\whatsopen.webapi.pdb
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\whatsopen.webapi.dll
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\whatsopen.webapi.pdb
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\Antlr3.Runtime.dll
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\EntityFramework.dll
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\Microsoft.WindowsAzure.StorageClient.dll
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\System.Net.Http.dll
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\System.Net.Http.Formatting.dll
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\System.Net.Http.WebRequest.dll
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\System.Web.Helpers.dll
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\System.Web.Http.dll
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\System.Web.Http.WebHost.dll
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\System.Web.Mvc.dll
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\System.Web.Optimization.dll
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\System.Web.Providers.dll
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\System.Web.Razor.dll
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\System.Web.WebPages.dll
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\System.Web.WebPages.Razor.dll
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\WebGrease.dll
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\Microsoft.WindowsAzure.Diagnostics.xml
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\Newtonsoft.Json.xml
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\System.Net.Http.xml
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\System.Net.Http.WebRequest.xml
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\EntityFramework.xml
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\System.Net.Http.Formatting.xml
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\System.Web.Helpers.xml
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\System.Web.Http.xml
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\System.Web.Http.WebHost.xml
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\System.Web.Mvc.xml
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\System.Web.Razor.xml
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\System.Web.WebPages.xml
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Jun Seki\Documents\GitHub\whatsopen\whatsopen.webapi\bin\System.Web.WebPages.Razor.xml

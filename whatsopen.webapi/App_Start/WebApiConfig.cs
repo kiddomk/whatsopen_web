@@ -14,6 +14,12 @@ namespace whatsopen.webapi
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Routes.MapHttpRoute(
+                name: "GeoApi",
+                routeTemplate: "api/{controller}/{action}/{geolocation}",
+                defaults: new { geolocation = RouteParameter.Optional }
+            );
         }
     }
 }

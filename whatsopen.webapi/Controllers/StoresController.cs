@@ -5,8 +5,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using whatsopen.webapi.Models;
-using YelpSharp;
-using YelpSharp.Data;
+//using YelpSharp;
+//using YelpSharp.Data;
 using System.Configuration;
 
 namespace whatsopen.webapi.Controllers

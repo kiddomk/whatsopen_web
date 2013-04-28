@@ -34,9 +34,19 @@ namespace whatsopen.webapi.Controllers
             return storeRepository.Find(id);
         }
 
-        // POST api/values
-        public void Post([FromBody]string value)
+        // Get api/getstore/closest/geolocation
+        [HttpGet]
+        [ActionName("Closest")]
+        public List<Store> Closest(string geolocation)
         {
+            if(!string.IsNullOrEmpty(geolocation))
+            {
+                double lat1 = Convert.ToDouble(geolocation.Split(',')[0]);
+                double lon1 = Convert.ToDouble(geolocation.Split(',')[1]);
+                return storeRepository.GetClosest(lat1, lon1);
+            }
+            return null;
+
         }
 
         // PUT api/values/5
